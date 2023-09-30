@@ -4,7 +4,7 @@ public class Policy
    private String providerName;
    private String policyHolderFirst;
    private String policyHolderLast;
-   private int policyHolderAge;
+   private int  policyHolderAge;
    private String smokingStatus;
    private double policyHolderHeight;
    private double policyHolderWeight;

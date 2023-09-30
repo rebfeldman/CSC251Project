@@ -11,6 +11,7 @@ public class Project_Rebecca_Feldman
    
    try 
    {
+   
    File file = new File("PolicyInformation.txt");
    
    Scanner inputFile = new Scanner(file);
@@ -19,12 +20,14 @@ public class Project_Rebecca_Feldman
    String providerName;
    String firstName;
    String lastName;
-   int age;
-   String smokingStatus;
+   int age = 0;
+   String smokingStatus = "";
    double height;
    double weight;
    double BMI =0.0;
    double policyPrice = 0.0;
+   int smokerCount = 0;
+   int nonSmokerCount = 0;
    
    ArrayList<Policy> policies = new ArrayList<Policy>();
    
@@ -59,29 +62,57 @@ inputFile.close();
 for(int i = 0; i < policies.size(); i++)
 {
   
-   BMI = policies.calculateBMI();
-   policyPrice = policies.calculateInsuranceFees();
+   BMI = policies.get(i).calculateBMI();
+   policyPrice = policies.get(i).calculateInsuranceFees();
    
    System.out.println();
    
-   System.out.println("Policy Number: " + policies.getPolicyNumber());
-   System.out.println("Provider Name: " + policies.getProviderName());
-   System.out.println("Policyholder's First Name: " + policies.getFirstName());
-   System.out.println("Policyholder's Last Name: " + policies..getLastName());
-   System.out.println("Policyholder's Age: " + policies.getAge());
-   System.out.println("Policyholder's Smoking Status: " +policies.getSmokingStatus());
-   System.out.println("Policyholder's Height: " + policies.getHeight() + " inches");
-   System.out.println("Policyholder's Weight: " + policies.getWeight() + " pounds");
+   System.out.println("Policy Number: " + policies.get(i).getPolicyNumber());
+   System.out.println("Provider Name: " + policies.get(i).getProviderName());
+   System.out.println("Policyholder's First Name: " + policies.get(i).getFirstName());
+   System.out.println("Policyholder's Last Name: " + policies.get(i).getLastName());
+   System.out.println("Policyholder's Age: " + policies.get(i).getAge());
+   System.out.println("Policyholder's Smoking Status: " + policies.get(i).getSmokingStatus());
+   System.out.println("Policyholder's Height: " + policies.get(i).getHeight() + " inches");
+   System.out.println("Policyholder's Weight: " + policies.get(i).getWeight() + " pounds");
    System.out.printf("Policyholder's BMI: %.2f\n", BMI);
    System.out.println();
    System.out.printf("Policy Price: $%,.2f\n", policyPrice);
    
    }
+   
+   
+ 
+   
+   for(int i = 0; i < policies.size(); i++)
+   {
+      if(smokingStatus == "Smoker" || smokingStatus == "smoker")
+      {
+      
+         smokerCount ++;
+      }
+      
+      else if (smokingStatus == "Non-Smoker" || smokingStatus == "non-smoker")
+      {
+      
+         nonSmokerCount ++;
+      }
+   }
+   
+   System.out.println("The number of policies with a smoker is: " + smokerCount);
+   System.out.println("The number of policies with a non-smoker is " + nonSmokerCount);
+   
+   
 }
    
+   catch(IOException ex)
+   {
+      System.out.println("Something went wrong reading the file: " + ex.getMessage() );
+   }
    
+   }
    
-   
+   }
 
 
 
