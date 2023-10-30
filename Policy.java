@@ -3,7 +3,7 @@ public class Policy
    private int policyNumber;
    private String providerName;
    
-   private double policyPrice;
+   
    
    // no-arg constructor
    public Policy() 
@@ -12,7 +12,6 @@ public class Policy
    policyNumber = 0;
    providerName = "Some Insurance";
    
-   policyPrice = 0;   
    
    }
    
@@ -63,7 +62,12 @@ public class Policy
       return providerName;
    }
       
-      
+
+
+ public String toString() {
+ 
+   return "Policy number: " + policyNumber + "\nProvider Name: " + providerName;
+ }     
    
        
   
