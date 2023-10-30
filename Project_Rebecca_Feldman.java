@@ -67,15 +67,17 @@ for(int i = 0; i < policies.size(); i++)
    
    System.out.println();
    
-   System.out.println("Policy Number: " + policies.get(i).getPolicyNumber());
-   System.out.println("Provider Name: " + policies.get(i).getProviderName());
-   System.out.println("Policyholder's First Name: " + policies.get(i).getFirstName());
-   System.out.println("Policyholder's Last Name: " + policies.get(i).getLastName());
-   System.out.println("Policyholder's Age: " + policies.get(i).getAge());
-   System.out.println("Policyholder's Smoking Status: " + policies.get(i).getSmokingStatus());
-   System.out.println("Policyholder's Height: " + policies.get(i).getHeight() + " inches");
-   System.out.println("Policyholder's Weight: " + policies.get(i).getWeight() + " pounds");
-   System.out.printf("Policyholder's BMI: %.2f\n", BMI);
+   //System.out.println("Policy Number: " + policies.get(i).getPolicyNumber());
+   //System.out.println("Provider Name: " + policies.get(i).getProviderName());
+   //System.out.println("Policyholder's First Name: " + policies.get(i).getFirstName());
+   //System.out.println("Policyholder's Last Name: " + policies.get(i).getLastName());
+   //System.out.println("Policyholder's Age: " + policies.get(i).getAge());
+   //System.out.println("Policyholder's Smoking Status: " + policies.get(i).getSmokingStatus());
+   //System.out.println("Policyholder's Height: " + policies.get(i).getHeight() + " inches");
+   //System.out.println("Policyholder's Weight: " + policies.get(i).getWeight() + " pounds");
+   //System.out.printf("Policyholder's BMI: %.2f\n", BMI);
+   Sytem.out.println(Policy);
+   System.out.println(PolicyHolder);
    System.out.println();
    System.out.printf("Policy Price: $%,.2f\n", policyPrice);
    
