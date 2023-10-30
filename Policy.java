@@ -3,6 +3,8 @@ public class Policy
    private int policyNumber;
    private String providerName;
    
+   public static int policyCounter = 0;
+   
    
    
    // no-arg constructor
@@ -50,6 +52,11 @@ public class Policy
       /* methid for getting policy num
       @return policyNumber */
       
+   public static void setPolicyCounter() {
+   
+      policyCounter++;
+   }
+      
    public int getPolicyNumber() 
    {
       return policyNumber;
@@ -60,6 +67,12 @@ public class Policy
    public String getProviderName()
    {
       return providerName;
+      
+   }
+   
+   public static int getPolicyCounter() {
+      
+      return policyCounter;
    }
       
 
