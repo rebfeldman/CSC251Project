@@ -6,7 +6,9 @@ public class PolicyHolder {
    private String smokingStatus;
    private double policyHolderHeight;
    private double policyHolderWeight;
+   
    private double BMI;
+   private double policyPrice;
 
 
 public PolicyHolder() {
@@ -177,6 +179,14 @@ public PolicyHolder(String firstName, String lastName, int age, String smoking,d
       
       }
        
+ public String toString() {
+ 
+ return "Policyholder's First Name: " + policyHolderFirst + "\nPolicyholder's Last Name"
+         + policyHolderLast + "\nPolicydoler's Age: " + policyHolderAge + "\nPolicyholder's Smoking Status: "
+         + smokingStatus + "\nPolicyholder's Height: " + policyHolderHeight + "\nPolicyholder's Weight: "
+         + policyHolderWeight + "\nPolicyholder's BMI: " + BMI + "\nPolicy Price: " + policyPrice;
+ 
+ }
 
 
 
