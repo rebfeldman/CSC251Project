@@ -2,34 +2,30 @@ public class Policy
 {
    private int policyNumber;
    private String providerName;
+   private PolicyHolder policyHolder;
    
    public static int policyCounter = 0;
    
    
    
-   // no-arg constructor
-   public Policy() 
-   {
    
-   policyNumber = 0;
-   providerName = "Some Insurance";
-   
-   
-   }
+ 
    
    /** Constructor
       @param pNum policy number
       @param nameOfProvider
+      @param policyHolder PolicyHolder
       
    
    
    */
    
-   public Policy (int pNum,String nameOfProvider)
+   public Policy (int pNum,String nameOfProvider, PolicyHolder pHolder)
    {
    
       policyNumber = pNum;
       providerName = nameOfProvider;
+      policyHolder = new PolicyHolder(pHolder);
       
       
    }
@@ -52,6 +48,11 @@ public class Policy
       /* methid for getting policy num
       @return policyNumber */
       
+   public void setPolicyHolder(PolicyHolder pHolder) {
+   
+      policyHolder = new PolicyHolder(pHolder);
+   }
+   
    public static void setPolicyCounter() {
    
       policyCounter++;
@@ -74,12 +75,17 @@ public class Policy
       
       return policyCounter;
    }
-      
+   
+   public PolicyHolder getPolicyHolder() {
+   
+      return new PolicyHolder(policyHolder);
+   }
 
 
  public String toString() {
  
-   return "Policy number: " + policyNumber + "\nProvider Name: " + providerName;
+   return "Policy number: " + policyNumber + "\nProvider Name: " + providerName +
+           + "\n" + policyHolder.toString();
  }     
    
        
